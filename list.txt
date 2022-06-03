@@ -1,0 +1,138 @@
+卷 新加卷 的文件夹 PATH 列表
+卷序列号为 7C2C-9CAF
+F:.
+│  app.py
+│  conf.py
+│  list.txt
+│  readme.md
+│  readme.pdf
+│  viewer.html
+│  
+├─data
+│  ├─pcds
+│  │      11_image.pcd
+│  │      
+│  ├─plys
+│  │      11_image.ply
+│  │      
+│  ├─pngs_depth
+│  │      depth_00087_colors.png
+│  │      depth_119_image.png
+│  │      depth_11_image.png
+│  │      depth_1647338757527.png
+│  │      depth_20220321101514.png
+│  │      depth_20220321101818.png
+│  │      depth_20220321101936.png
+│  │      depth_20220413203338.png
+│  │      depth_24365C71-22C5-432B-9F83-D239ED5EFCAD.png
+│  │      depth_2D321C65-AB6E-4F48-9695-69A945FFE794.png
+│  │      depth_312_image.png
+│  │      depth_377_image.png
+│  │      depth_4033E76D-D65F-49CD-8299-9CCEF6F59702.png
+│  │      depth_470_image.png
+│  │      depth_499_image.png
+│  │      depth_626_image.png
+│  │      depth_9BC610D1-8F4A-4367-8636-849D7819A00E.png
+│  │      depth_A40F3F1A-3D4A-4EF0-A1D4-1DA5D11F6FD6.png
+│  │      depth_A4B778F4-9893-42BF-8D49-FD86A120CDB1.jpeg
+│  │      depth_BB283C64-C675-4478-8F38-C0CC53B828DE.png
+│  │      depth_E5259A72-5DE6-4532-BE2B-0D7C563D1B91.png
+│  │      depth_F5BF322A-73E5-407B-AC40-959EF15C0E25.png
+│  │      depth_F5E00DC1-61A4-49F1-8DA7-F4334FB809B3.png
+│  │      depth_image.png
+│  │      depth_IMG_20210323_110603.png
+│  │      depth_IMG_3108.png
+│  │      depth_IMG_3109.png
+│  │      depth_IMG_7954.png
+│  │      depth_IMG_7956.png
+│  │      depth_IMG_7965.png
+│  │      depth_P20414-200333.png
+│  │      depth_QQ截图20220413203338.png
+│  │      depth_rgb_1647338757527.png
+│  │      depth_web.png
+│  │      
+│  └─pngs_rgb
+│          rgb_00087_colors.png
+│          rgb_11_image.png
+│          rgb_A40F3F1A-3D4A-4EF0-A1D4-1DA5D11F6FD6.png
+│          rgb_image.png
+│          rgb_IMG_7954.png
+│          rgb_IMG_7956.png
+│          rgb_IMG_7965.png
+│          
+├─modules
+│  │  conf.py
+│  │  layers.py
+│  │  model.h5
+│  │  predict.py
+│  │  utils.py
+│  │  __init__.py
+│  │  
+│  └─__pycache__
+│          conf.cpython-37.pyc
+│          conf.cpython-39.pyc
+│          layers.cpython-37.pyc
+│          layers.cpython-39.pyc
+│          predict.cpython-37.pyc
+│          predict.cpython-39.pyc
+│          utils.cpython-37.pyc
+│          utils.cpython-39.pyc
+│          __init__.cpython-37.pyc
+│          __init__.cpython-39.pyc
+│          
+├─static
+│  │  back.png
+│  │  background.png
+│  │  background1.png
+│  │  gohome.png
+│  │  gohome2.png
+│  │  gohome3.png
+│  │  logo.png
+│  │  
+│  ├─css
+│  │      bootstrap.min.css
+│  │      bulma.min.css
+│  │      font-awesome.min.css
+│  │      
+│  ├─exhibit
+│  │      bath.png
+│  │      bed.png
+│  │      closet.png
+│  │      dorm.jpg
+│  │      
+│  └─js
+│      │  jquery.binarytransport.js
+│      │  load_bin_file.js
+│      │  load_pcd_file.js
+│      │  OrbitControls.js
+│      │  stream.js
+│      │  viewer.js
+│      │  
+│      └─contrib
+│              bootstrap.min.js
+│              jquery.min.js
+│              three.min.js
+│              three.min_back.js
+│              webgl-detector.js
+│              
+├─templates
+│      exhibit.html
+│      index.html
+│      layout.html
+│      result.html
+│      upload.html
+│      
+└─test
+        119_image.png
+        11_image.png
+        140_image.png
+        1_image.png
+        267_image.png
+        308_image.png
+        312_image.png
+        358_image.png
+        377_image.png
+        470_image.png
+        499_image.png
+        626_image.png
+        

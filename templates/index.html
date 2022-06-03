@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3dReconstruction</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="static/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+        <!-- <link rel="stylesheet" href="static/css/bulma.min.css"> -->
+    </head>
+    <body background="./static/background1.png"> 
+        <section class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{{ home_ip }}">
+                <img src="./static/gohome3.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <div class="container" style="margin-top:30px">
+                <h1 align="center" class="title is-spaced">
+                在线三维重建系统
+                </h1>
+            </div>
+        </section>
+
+        <section class="is-medium">
+            <div style="text-align:center; margin-top:50px">
+                <img style="width: 150px;" src="./static/logo.png">
+            </div>
+            <div class="container is-large" style="margin-top: 170px;; margin-bottom:15px;">
+                <div class="two_buttons">
+                    <div>
+                        <input type="button" class="button is-primary"  value="开始重建" onclick="javascrtpt:window.location.href='{{ upload_ip }}'" />
+                    </div>
+                    <div style="margin-top:15px">
+                        <input type="button" class="button is-primary"  value="模型展示" onclick="javascrtpt:window.location.href='{{ exhibit_ip }}'" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="footer_1">
+                <div class="container_1" style="text-align:center;clear:both;">
+                    <p style="font-size:80%; padding-top: 5px;">三维游戏研究-毕业设计</p>
+                    <p style="font-size:80%; padding-bottom: 0px;">信息学院计算机系18级本科生：<a href="https://blog.csdn.net/SingDanceRapBall" target="_blank">李天正</a></p>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            html{
+                width:100%;
+                height: 100%;
+            }
+            body{
+                height: 100%;
+                width: 100%;
+                text-align:center;
+                margin-top: 0;
+                padding-top: 0;
+                background-repeat: no-repeat; /*避免重复显示图片*/
+                background-attachment: fixed; /*设置图片固定*/
+                background-size: 100% 100%;
+            }
+            .button{
+                width: 230px;
+                height: 120%;
+            }
+            .two_buttons{
+                
+                /* height: 200px; */
+                display: flex;
+                flex-direction: column;
+                display: -webkit-flex;
+                -webkit-flex-direction:column;
+                align-items: center;
+                justify-content:center;
+                flex-wrap: wrap;
+            }
+            .footer_1{
+                /* min-height:6px;
+                height: 6vh; */
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+            }
+            .container_1{
+                height:6vh;
+                background-color:rgba(185, 190, 192, 0.56);
+            }
+        </style>
+    </body>
+</html>
+    
+

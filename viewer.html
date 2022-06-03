@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Pointcloud Viewer</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- <link rel="stylesheet" href="static/css/font-awesome.min.css"> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+		<!-- <link rel="stylesheet" href="static/css/bulma.min.css"> -->
+	</head>
+
+	<body>
+		<script src="static/js/contrib/jquery.min.js"></script>
+		<script src="static/js/contrib/bootstrap.min.js"></script>
+		<script src="static/js/contrib/webgl-detector.js"></script>
+		<script src="static/js/contrib/three.min.js"></script>
+		<script src="static/js/OrbitControls.js"></script>
+		<script src="static/js/jquery.binarytransport.js"></script>
+		<script src="static/js/stream.js"></script>
+		<script src="static/js/load_bin_file.js"></script>
+		<script src="static/js/load_pcd_file.js"></script>
+		<script src="static/js/viewer.js"></script>
+		<script>
+			function getUrlParameter(sParam) {
+				//从问号?开始的 URL
+				var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+					sURLVariables = sPageURL.split('&'),
+					sParameterName,
+					i;
+
+				for (i = 0; i < sURLVariables.length; i++) {
+					sParameterName = sURLVariables[i].split('=');
+
+					if (sParameterName[0] === sParam) {
+						return sParameterName[1] === undefined ? true : sParameterName[1];
+					}
+				}
+			}
+
+			function getFloatParameter(sParam) {
+				var str = getUrlParameter(sParam);
+				if(str)
+					return parseFloat(str);
+				else
+					return undefined;
+			}
+
+			$(function() {
+				viewer($('#container'), {
+					//pcd路径
+					filename: getUrlParameter('load'),
+					// 起始变换
+					roll:  getFloatParameter('roll'),
+					pitch: getFloatParameter('pitch'),
+					yaw:   getFloatParameter('yaw'),
+					// 点云大小
+					pointSize: getFloatParameter('pointSize'),
+					// 主页ip
+					homeIP: getUrlParameter('homeIP')
+				});
+			});
+		</script>
+
+		<!-- <h1 align="center" class="title is-spaced">
+			在线三维重建系统
+		</h1> -->
+
+		<section class="navbar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand" style="display:flex; justify-content:space-between">
+				<a id="homeip" class="navbar-item" href="{{ home_ip }}">
+					<img src="./static/gohome3.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+				</a>
+			</div>
+		</section>
+			
+		<section>
+			<div id="container" style="width:100%; height:100%; background-color:black">
+				<div style="position:absolute; left:5%; top:12%; text-align:center; display: flex;">
+					<div> <button id="myBtn-" class="button is-primary" style="width:80px; margin-right:10px">点云减小</button> </div>
+					<div> <button id="myBtn+" class="button is-primary" style="width:80px">点云增大</button> </div>
+					<div> <p id="demo" style="color:rgb(202, 251, 251); margin-left: 30px; font-size:15px;margin-top: 5px;">点云尺寸: 0.2</p>	</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="footer_1">
+				<div class="container_1" style="text-align:center;clear:both;">
+					<p style="font-size:80%; padding-top: 5px;">三维游戏研究-毕业设计</p>
+					<p style="font-size:80%; padding-bottom: 0px;">信息学院计算机系18级本科生：<a href="https://blog.csdn.net/SingDanceRapBall" target="_blank">李天正</a></p>
+				</div>
+			</div>
+		</section>
+
+		<style>
+			html {
+				width: 100%; 
+				height:100%;
+			}
+			body {width: 100%; height:100%; margin:0; padding:0; background-color:rgb(255, 255, 255); overflow: hidden;}
+			canvas {width:100%; height:100%;}
+			.footer_1{
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+			}
+			.container_1{
+				height:6vh;
+				background-color:rgba(185, 190, 192, 0.56);
+			}
+		</style>
+  	</body>
+</html>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3dReconstruction</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="static/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+        <!-- <link rel="stylesheet" href="static/css/bulma.min.css"> -->
+    </head>
+    <body background="./static/background1.png">
+        <section class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand"  style="display:flex; justify-content:space-between">
+        <a class="navbar-item" href="{{ home_ip }}">
+            <img src="./static/gohome3.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+        </a>
+        <!-- <a class="navbar-item" href="{{ back_ip }}"> -->
+        <a class="navbar-item" href="javascript:;" onClick="javascript:history.back(-1);">
+            <img src="./static/back.png" alt="Bulma: a modern CSS framework based on Flexbox" height="28">
+        </a>
+        </div>
+        </section>
+        <section>
+        <div class="container" style="margin-top:30px">
+            <h1 align="center" class="title is-spaced">
+            在线三维重建系统
+            </h1>
+        </div>
+        {% block body %}{% endblock %}
+        </section>
+        <section>
+        <div class="footer_1">
+            <div class="container_1" style="text-align:center;clear:both;">
+            <p style="font-size:80%; padding-top: 5px;">三维游戏研究-毕业设计</p>
+            <p style="font-size:80%; padding-bottom: 0px;">信息学院计算机系18级本科生：<a href="https://blog.csdn.net/SingDanceRapBall" target="_blank">李天正</a></p>
+            </div>
+        </div>
+        </section>
+        <style>
+            html{
+                height: 100%;
+                width:100%;
+            }
+            .footer_1{
+                /* min-height:6px;
+                height: 6vh; */
+                width: 100%;
+                position: fixed;
+                bottom: 0;
+            }
+            .container_1{
+                height:6vh;
+                background-color:rgba(185, 190, 192, 0.56);
+            }
+        </style>
+    </body>
+</html>
