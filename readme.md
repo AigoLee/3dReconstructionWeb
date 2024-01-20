@@ -39,8 +39,10 @@
     ├── result.html
     └── upload.html
 ```
+## 演示
+详见mp4视频
 ## 使用说明
-1. 下载深度图预测模型[NYU Depth V2](https://drive.google.com/file/d/19dfvGvDfCRYaqxVKypp1fRHwK7XtSjVu/view?usp=sharing) (165 MB)，放置在```/modules/```下改名为model.h5
+1. 下载深度图预测模型[NYU Depth V2](https://pan.baidu.com/s/1iOwDb_HaM56BUI4B7iazWg?pwd=mome) (165 MB)，放置在```/modules/```下改名为model.h5
 2. 首先确保服务端和测试端连接同一个局域网，可通过```ipconfig```查看所在局域网IP
 3. 修改根目录下```conf.py```配置文件，将```server_model_ip```和```server_3d_ip```改为局域网IP
 4. 在根目录下打开终端，输入```python app.py```
